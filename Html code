@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>currency cunverter</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div id="main">
+            <div id="box">
+                <h2 > currency cunverter</h3>
+                    <p style="margin-left: 1rem;margin-top: 2rem;">Enter Amount</p>
+                    <input style="margin-left: 1rem;" id="sbox" value="100" type="text"/>
+                    <!-- <div id="sbox"> </div> -->
+                    <text >
+                        <div class="select_container1">
+                            <p>From</p>
+                            <img id="m1" src="https://flagsapi.com/US/flat/64.png">
+                            <select id="s1">
+                                 <!-- <option selected>USD</option>  -->
+                                <!-- <option>INR</option>
+                                <option>EUR</option>
+                                <option>AUD</option>  -->
+
+                            </select>
+                        </div>
+                        <i  class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <div class="select_container2">
+                            <p >To</p>
+                            <img id="m2" src="https://flagsapi.com/IN/flat/64.png">
+                            <select id="s2">
+                               
+                                 <!-- <option selected1>INR</option> -->
+                                <!-- <option>USD</option>
+                                <option>EUR</option>
+                                <option>AUD</option> --> 
+                            </select>
+
+                        </div>     
+                    <!-- <input value="100" type="text"/> -->
+                </text>
+                <h3 id="ans">1USD =100INR</h3>
+               
+                    <div id="box2">Get Exchange Rates</div> 
+            </div>
+        </div>
+        <script src="contrylist.js"></script>
+<script src="first.js"></script>
+    </body>
+</html>
