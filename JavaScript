@@ -1,0 +1,66 @@
+
+
+
+let sbox= document.querySelector("#sbox");
+
+
+
+let s1 =document.querySelector("#s1");
+for(i in countryList){
+    let newoption =document.createElement("option");
+    newoption.innerText =i;
+    newoption.value= i;
+    if(newoption.value==="USD"){
+        newoption.selected= "selected";
+    }
+    s1.append(newoption); 
+}
+let s2= document.querySelector("#s2");
+let m2= document.querySelector("#m2");
+for(i in countryList){
+    let newoption  =document.createElement("option");
+    newoption.innerText =i;
+    newoption.value= i;
+    if(newoption.value==="INR"){
+        newoption.selected= "selected";
+    }
+          
+    s2.append(newoption);
+}
+s1.addEventListener("change",()=>{
+    let selectedIndex= s1.selectedIndex;
+    let selectedoption= s1.options[selectedIndex];
+    let currencyCode= selectedoption.innerText;
+    let countryCode =countryList[currencyCode];
+
+    m1.src =`https://flagsapi.com/${countryCode}/flat/64.png`;
+})
+s2.addEventListener("change",()=>{
+    let selectedIndex= s2.selectedIndex;
+    let selectedoption= s2.options[selectedIndex];
+    let currencyCode= selectedoption.innerText;
+    let countryCode= countryList[currencyCode];
+    m2.src= `https://flagsapi.com/${countryCode}/flat/64.png`;
+})
+let box2= document.querySelector("#box2");
+let input= document.querySelector("#sbox");
+let ans =document.querySelector("#ans");
+
+
+
+
+box2.addEventListener("click",()=>{
+    
+    let selectedIndex1= s1.selectedIndex;
+    let selectedoption1= s1.options[selectedIndex1];
+    let currencyCode1= selectedoption1.innerText;
+    let selectedIndex2= s2.selectedIndex;
+    let selectedoption2= s2.options[selectedIndex2];
+    let currencyCode2= selectedoption2.innerText;
+
+   
+    ans.innerText =`${input.value}${currencyCode1} = NAN ${currencyCode2}`;
+    
+
+})
+
